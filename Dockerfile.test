@@ -1,0 +1,6 @@
+# Runs the test suite. Start it with: docker run --rm car-tests
+FROM python:3.11-slim
+WORKDIR /app
+COPY . .
+RUN pip install --no-cache-dir pytest
+CMD ["pytest", "-v"]
